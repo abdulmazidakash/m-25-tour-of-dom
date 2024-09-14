@@ -8,18 +8,23 @@
 	<link rel="stylesheet" href="styles.css">
 
 	<style>
-		li{
+		.fruits-container li{
 			color: tomato;
 		}
 
 		#fruits-title{
 			color: black;
 		}
+
+		.important-places{
+			color: blueviolet;
+		}
 	</style>
 </head>
 <body>
 	<header>
 		<h1>Welcome to My DOM</h1>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quam maiores, quas aliquid deserunt beatae unde dicta laudantium commodi natus libero voluptas alias veritatis sapiente corporis fuga consectetur sed. Illum.</p>
 	</header>
 	
 	<main>
@@ -34,7 +39,7 @@
 				</ul>
 		</section>
 
-		<section>
+		<section class="fruits-container">
 			 <h1 id="fruits-title">Fruits i like</h1>
 				<ul>
 					<li>Apple</li>
@@ -74,17 +79,31 @@
 			// console.log(li.innerHTML);
 		}
 
+		// option -1: getElementByTagName
 		const allHeadings = document.getElementsByTagName('h1');
 		for (let h1 of allHeadings){
 			// console.log(h1.innerHTML);
 		}
 
+		// option - 2: getElementById
 		const fruitsTitle = document.getElementById('fruits-title');
 		fruitsTitle.innerHTML = 'Fruits changed by js';
 
+		// option - 3: getElementByClassName
 		const places = document.getElementsByClassName('important-places');
 		for (const place of places){
-			console.log(place.innerText);
+			// console.log(place.innerText);
+			// console.log(place.innerHTML);
+		}
+
+		// option - 4: query selector
+		
+		// option - 5: query selector all
+		const someLi = document.querySelectorAll('.fruits-container li');
+		console.log(someLi);
+
+		for (const li of someLi){
+			console.log(li.innerText);
 		}
 	</script>
 	
