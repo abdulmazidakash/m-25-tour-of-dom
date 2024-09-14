@@ -11,27 +11,47 @@
 		li{
 			color: tomato;
 		}
+
+		#fruits-title{
+			color: black;
+		}
 	</style>
 </head>
 <body>
 	<header>
 		<h1>Welcome to My DOM</h1>
-		<h1>My Awesome DOM de baba</h1>
 	</header>
-
+	
 	<main>
-		<ul>
-			<li>jalali set</li>
-			<li>Shafayet</li>
-			<li>bonobash</li>
-			<li>DOM de re baba</li>
-		</ul>
 
-		<ul>
-			<li>Apple</li>
-			<li>Banana</li>
-			<li>Carrot</li>
-		</ul>
+		<section>
+			<h1>My Awesome DOM de baba</h1>
+				<ul>
+					<li>jalali set</li>
+					<li>Shafayet</li>
+					<li>bonobash</li>
+					<li>DOM de re baba</li>
+				</ul>
+		</section>
+
+		<section>
+			 <h1 id="fruits-title">Fruits i like</h1>
+				<ul>
+					<li>Apple</li>
+					<li>Banana</li>
+					<li>Carrot</li>
+				</ul>
+		</section>
+
+		<section>
+			<h1 id="place-title">Places i like to visit</h1>
+			<ul>
+				<li class="important-places">Soondarban</li>
+				<li class="important-places">bandorban</li>
+				<li class="important-places">Kataban</li>
+				<li class="other-place">Shalbon</li>
+			</ul>
+		</section>
 	</main>
 
 	<script src="js/dom.js"></script>
@@ -51,12 +71,20 @@
 
 		// console.log(liCollection);
 		for (const li of liCollection){
-			console.log(li.innerHTML);
+			// console.log(li.innerHTML);
 		}
 
 		const allHeadings = document.getElementsByTagName('h1');
 		for (let h1 of allHeadings){
-			console.log(h1.innerHTML);
+			// console.log(h1.innerHTML);
+		}
+
+		const fruitsTitle = document.getElementById('fruits-title');
+		fruitsTitle.innerHTML = 'Fruits changed by js';
+
+		const places = document.getElementsByClassName('important-places');
+		for (const place of places){
+			console.log(place.innerText);
 		}
 	</script>
 	
