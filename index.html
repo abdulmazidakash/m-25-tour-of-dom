@@ -24,12 +24,40 @@
 			<li>jalali set</li>
 			<li>Shafayet</li>
 			<li>bonobash</li>
+			<li>DOM de re baba</li>
+		</ul>
+
+		<ul>
+			<li>Apple</li>
+			<li>Banana</li>
+			<li>Carrot</li>
 		</ul>
 	</main>
 
 	<script src="js/dom.js"></script>
 	<script>
-		console.log('adding js inside the html file');
+		
+		// const student = {
+		// 	name: 'Abul',
+		// 	Id: 11,
+		// 	study: function(time){
+		// 		console.log(time, 'study kortese');
+		// 	}
+		// }
+
+		// console.log('adding js inside the html file');
+
+		const liCollection = document.getElementsByTagName('li');
+
+		// console.log(liCollection);
+		for (const li of liCollection){
+			console.log(li.innerHTML);
+		}
+
+		const allHeadings = document.getElementsByTagName('h1');
+		for (let h1 of allHeadings){
+			console.log(h1.innerHTML);
+		}
 	</script>
 	
 </body>
